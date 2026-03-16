@@ -553,10 +553,9 @@
         <div class="hero-copy">
           <div>
             <div class="eyebrow">Desktop control surface for agent work</div>
-            <h1>Run, inspect, and ship agent output from one desktop app.</h1>
+            <h1>Run and review agent work in one place.</h1>
             <p class="subtitle">
-              RESI gives you a single place to launch work, watch orchestration unfold, inspect artifacts,
-              and review every output before it leaves the machine. The source stays private. The release surface stays public.
+              Start a run, watch it unfold, inspect the graph, and review the files it produces without jumping between tools.
             </p>
           </div>
 
@@ -570,14 +569,14 @@
               <strong>macOS and Linux</strong>
             </div>
             <div class="meta-pill">
-              <span>Distribution</span>
-              <strong>Signed public builds</strong>
+              <span>Built for</span>
+              <strong>Desktop review</strong>
             </div>
           </div>
 
           <div class="cta-row">
-            <a class="button" id="hero-download" href="#download">Download latest build</a>
-            <a class="button secondary" id="release-link" href="https://github.com/AlgorithmicResearchGroup/resi-releases/releases/latest">View all release assets</a>
+            <a class="button" id="hero-download" href="#download">Download</a>
+            <a class="button secondary" id="release-link" href="https://github.com/AlgorithmicResearchGroup/resi-releases/releases/latest">All downloads</a>
           </div>
         </div>
 
@@ -594,29 +593,28 @@
         <div class="section-head">
           <div>
             <p class="card-kicker">What RESI is</p>
-            <h2>A real product surface, not a demo wrapper.</h2>
+            <h2>The desktop layer for agent operations.</h2>
           </div>
           <p>
-            RESI is built for people who need to direct agent work, understand what happened, and keep the output trail intact.
-            It treats launch, observability, and artifacts as one workflow.
+            RESI is for people who need to start work, understand what happened, and leave with something usable at the end.
           </p>
         </div>
 
         <div class="section-grid">
           <article class="section-card">
             <p class="card-kicker">Launch</p>
-            <h3>Start work with intent</h3>
-            <p>Compose a task, pick the orchestration pattern, and run locally or against remote infrastructure from the same surface.</p>
+            <h3>Start work fast</h3>
+            <p>Launch a run with the right pattern, target, and model from a single screen.</p>
           </article>
           <article class="section-card">
             <p class="card-kicker">Observe</p>
-            <h3>See execution in motion</h3>
-            <p>Watch agents, messages, topology, and output as they happen instead of guessing what the system is doing.</p>
+            <h3>See what is happening</h3>
+            <p>Follow progress, outputs, and topology as the system works.</p>
           </article>
           <article class="section-card">
             <p class="card-kicker">Review</p>
-            <h3>Inspect the actual artifacts</h3>
-            <p>Browse files, logs, and structured outputs in-place so each run leaves behind something auditable and usable.</p>
+            <h3>Review the results</h3>
+            <p>Open files, inspect outputs, and package up the run when it is ready to hand off.</p>
           </article>
         </div>
       </section>
@@ -625,11 +623,10 @@
         <div class="section-head">
           <div>
             <p class="card-kicker">Core surfaces</p>
-            <h2>Everything important stays visible.</h2>
+            <h2>Four views that cover the whole run.</h2>
           </div>
           <p>
-            The interface is organized around the moments that actually matter: starting work, tracking live progress, understanding the graph,
-            and reviewing the resulting workspace.
+            Each view answers a different question: what to run, what is happening, how it is connected, and what came out.
           </p>
         </div>
 
@@ -638,11 +635,11 @@
             <div class="shot-frame"><img src="images/prompt.png" alt="RESI compose view" /></div>
             <div class="shot-copy">
               <p class="shot-kicker">Compose</p>
-              <h3>Launch runs without configuration sprawl.</h3>
-              <p>The prompt surface keeps the core controls close: task, pattern, target, model, effort, and workspace reuse.</p>
+              <h3>Start the run.</h3>
+              <p>Set the task, choose the shape of the run, and launch without digging through settings.</p>
               <div class="feature-list">
-                <div><strong>Direct control</strong><span>Start real work from a single input, not a maze of forms.</span></div>
-                <div><strong>Pattern-aware</strong><span>Choose the orchestration style that matches the task.</span></div>
+                <div><strong>Direct control</strong><span>Everything important is visible before you start.</span></div>
+                <div><strong>Flexible runs</strong><span>Use the setup that fits the task instead of forcing one workflow.</span></div>
               </div>
             </div>
           </div>
@@ -650,11 +647,11 @@
           <div class="shot-row">
             <div class="shot-copy">
               <p class="shot-kicker">Output</p>
-              <h3>Watch the run produce actual deliverables.</h3>
-              <p>Track agent roles, file activity, messages, and logs in one place while the run is happening.</p>
+              <h3>Watch progress live.</h3>
+              <p>See status, messages, file updates, and results as they appear.</p>
               <div class="feature-list">
-                <div><strong>Live signals</strong><span>See build state, active wave, and file changes immediately.</span></div>
-                <div><strong>Operator view</strong><span>One screen for progress, blockers, and downstream output.</span></div>
+                <div><strong>One run view</strong><span>Progress, blockers, and output stay together.</span></div>
+                <div><strong>Readable status</strong><span>You do not need to infer what the system is doing.</span></div>
               </div>
             </div>
             <div class="shot-frame"><img src="images/output.png" alt="RESI output dashboard" /></div>
@@ -664,11 +661,11 @@
             <div class="shot-frame"><img src="images/hud.png" alt="RESI topology view" /></div>
             <div class="shot-copy">
               <p class="shot-kicker">Topology HUD</p>
-              <h3>See the graph instead of inferring it.</h3>
-              <p>The HUD exposes active nodes, dependencies, messaging edges, and run state as a live control surface.</p>
+              <h3>See the system as a graph.</h3>
+              <p>Understand which workers are active, how they connect, and where the run is getting stuck.</p>
               <div class="feature-list">
-                <div><strong>Operational clarity</strong><span>Fit, pause, and inspect the topology while work is still in flight.</span></div>
-                <div><strong>Readable graphs</strong><span>The system’s structure is visible without reading raw internals.</span></div>
+                <div><strong>Live structure</strong><span>The graph updates with the run instead of staying abstract.</span></div>
+                <div><strong>Clear bottlenecks</strong><span>Find stalled or failed work faster.</span></div>
               </div>
             </div>
           </div>
@@ -676,11 +673,11 @@
           <div class="shot-row">
             <div class="shot-copy">
               <p class="shot-kicker">Files</p>
-              <h3>Review the workspace like a product output, not a side effect.</h3>
-              <p>Every run has a workspace. RESI lets you browse it directly, preview contents, and pull the whole bundle when needed.</p>
+              <h3>Open the artifacts.</h3>
+              <p>Browse the workspace, preview what the run produced, and export it when you need to share it.</p>
               <div class="feature-list">
-                <div><strong>Artifact-first</strong><span>Outputs stay inspectable after the run ends.</span></div>
-                <div><strong>Downloadable runs</strong><span>Export the workspace as a ZIP when you need to hand it off.</span></div>
+                <div><strong>Artifact-first</strong><span>The result is something you can actually inspect.</span></div>
+                <div><strong>Easy handoff</strong><span>Download the run when it is ready to leave the app.</span></div>
               </div>
             </div>
             <div class="shot-frame"><img src="images/files.png" alt="RESI file browser" /></div>
@@ -718,9 +715,9 @@
       </section>
 
       <footer class="footer">
-        <p>Private source. Public release surface. Desktop-first agent operations.</p>
+        <p>Run, inspect, and review agent work from one desktop interface.</p>
         <div class="footer-links">
-          <a href="https://github.com/AlgorithmicResearchGroup/resi-releases/releases/latest">Release assets</a>
+          <a href="https://github.com/AlgorithmicResearchGroup/resi-releases/releases/latest">All downloads</a>
           <a href="#download">Download</a>
         </div>
       </footer>
