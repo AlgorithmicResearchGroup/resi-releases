@@ -691,31 +691,28 @@
       <section class="download-band" id="download">
         <div class="download-copy">
           <p class="card-kicker">Public builds</p>
-          <h2>Download the latest release.</h2>
-          <p>
-            Public installers are published from <code>AlgorithmicResearchGroup/resi-releases</code>.
-            macOS builds are signed and notarized. Linux builds ship with published SHA-256 checksums.
-          </p>
+          <h2>Download RESI.</h2>
+          <p>Choose your platform and install the latest build. If you need everything, the full release is one click away.</p>
           <p class="status" id="status">Fetching the latest public release…</p>
         </div>
 
         <div class="download-cards">
           <article class="download-card">
             <h3>macOS</h3>
-            <p id="macos-copy">Detecting the best macOS build for this machine.</p>
-            <a class="button" id="macos-download" href="#" aria-disabled="true">Checking latest release…</a>
+            <p id="macos-copy">Recommended download for Mac.</p>
+            <a class="button" id="macos-download" href="#" aria-disabled="true">Download</a>
           </article>
 
           <article class="download-card">
             <h3>Linux</h3>
-            <p>AppImage for quick launch, plus Debian package for packaged installs.</p>
-            <a class="button secondary" id="linux-download" href="#" aria-disabled="true">Checking latest release…</a>
+            <p>Quick to launch and easy to install.</p>
+            <a class="button secondary" id="linux-download" href="#" aria-disabled="true">Download</a>
           </article>
 
           <article class="download-card">
             <h3>Checksums</h3>
-            <p>Verify the published binaries before installation.</p>
-            <a class="button secondary" id="checksums-download" href="#" aria-disabled="true">Checking latest release…</a>
+            <p>For teams that verify what they install.</p>
+            <a class="button secondary" id="checksums-download" href="#" aria-disabled="true">Download</a>
           </article>
         </div>
       </section>
@@ -782,12 +779,10 @@
           const checksumsAsset = assets.find((asset) => asset.name === 'SHA256SUMS.txt');
 
           if (macAsset) {
-            setButton(macosDownload, `Download ${macAsset.name}`, macAsset.browser_download_url);
+            setButton(macosDownload, 'Download', macAsset.browser_download_url);
             heroDownload.href = macAsset.browser_download_url;
-            heroDownload.textContent = 'Download for macOS';
-            macosCopy.textContent = macAsset.name.includes('arm64')
-              ? 'Apple Silicon build selected for this machine.'
-              : 'Intel build selected as the default macOS download.';
+            heroDownload.textContent = 'Download';
+            macosCopy.textContent = 'Recommended download for Mac.';
           } else {
             disableButton(macosDownload, 'macOS build unavailable');
             heroDownload.href = '#download';
@@ -796,18 +791,18 @@
           }
 
           if (linuxAsset) {
-            setButton(linuxDownload, `Download ${linuxAsset.name}`, linuxAsset.browser_download_url);
+            setButton(linuxDownload, 'Download', linuxAsset.browser_download_url);
           } else {
             disableButton(linuxDownload, 'Linux build unavailable');
           }
 
           if (checksumsAsset) {
-            setButton(checksumsDownload, 'Download SHA256SUMS.txt', checksumsAsset.browser_download_url);
+            setButton(checksumsDownload, 'Download', checksumsAsset.browser_download_url);
           } else {
             disableButton(checksumsDownload, 'Checksums unavailable');
           }
 
-          status.textContent = `Latest public release: ${release.tag_name || 'latest'}`;
+          status.textContent = `Latest version: ${release.tag_name || 'latest'}`;
         } catch (error) {
           console.error(error);
           releaseTag.textContent = 'Unavailable';
