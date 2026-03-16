@@ -274,61 +274,30 @@
 
       .visual-main {
         position: absolute;
-        top: 26px;
-        left: 24px;
-        width: min(92%, 760px);
+        top: 28px;
+        left: 22px;
+        width: calc(100% - 44px);
         border-radius: 20px;
         border: 1px solid rgba(119, 168, 242, 0.24);
         box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
       }
 
-      .visual-float {
+      .visual-strip {
         position: absolute;
-        width: 42%;
-        min-width: 220px;
-        border-radius: 18px;
-        border: 1px solid rgba(119, 168, 242, 0.18);
-        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
-      }
-
-      .visual-output {
-        right: 18px;
-        bottom: 204px;
-      }
-
-      .visual-hud {
-        left: 26px;
-        bottom: 20px;
-      }
-
-      .visual-caption {
-        position: absolute;
-        right: 24px;
-        top: 24px;
-        z-index: 2;
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+        z-index: 1;
         display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
-        max-width: 220px;
       }
 
-      .caption-chip {
-        width: fit-content;
-        padding: 8px 12px;
-        border-radius: 999px;
-        border: 1px solid rgba(240, 180, 87, 0.28);
-        background: rgba(240, 180, 87, 0.1);
-        color: var(--gold);
-        font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .visual-caption p {
-        margin: 0;
-        color: #d7e4f6;
-        line-height: 1.55;
-        font-size: 0.96rem;
+      .visual-thumb {
+        width: 100%;
+        border-radius: 16px;
+        border: 1px solid rgba(119, 168, 242, 0.18);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.36);
       }
 
       .section-grid {
@@ -551,9 +520,10 @@
           width: 100%;
         }
 
-        .visual-float,
-        .visual-caption {
-          display: none;
+        .visual-strip {
+          position: static;
+          margin-top: 14px;
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -611,12 +581,10 @@
 
         <div class="hero-visual" aria-hidden="true">
           <img class="visual-main" src="images/prompt.png" alt="RESI prompt interface" />
-          <div class="visual-caption">
-            <div class="caption-chip">Live desktop product</div>
-            <p>Prompt, observe, inspect, and review the full run without leaving the interface.</p>
+          <div class="visual-strip">
+            <img class="visual-thumb" src="images/output.png" alt="RESI output view" />
+            <img class="visual-thumb" src="images/hud.png" alt="RESI topology HUD" />
           </div>
-          <img class="visual-float visual-output" src="images/output.png" alt="RESI output view" />
-          <img class="visual-float visual-hud" src="images/hud.png" alt="RESI topology HUD" />
         </div>
       </section>
 
