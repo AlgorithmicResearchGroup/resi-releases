@@ -8,6 +8,7 @@
       name="description"
       content="RESI is a desktop control surface for running, observing, and reviewing multi-agent work with live topology, output, and file inspection."
     />
+    <link rel="preload" as="image" href="images/optimized/hud.webp" type="image/webp" fetchpriority="high" />
     <style>
       :root {
         color-scheme: dark;
@@ -541,7 +542,16 @@
     <main class="shell">
       <header class="topbar">
         <a class="brand" href="#top" aria-label="RESI home">
-          <img src="images/logos/White%20on%20transparent.png" alt="RESI logo" />
+          <picture>
+            <source srcset="images/logos/white-on-transparent-192.webp" type="image/webp" />
+            <img
+              src="images/logos/White%20on%20transparent.png"
+              alt="RESI logo"
+              width="192"
+              height="58"
+              decoding="async"
+            />
+          </picture>
           <span class="brand-wordmark">
             <strong>RESI</strong>
             <span>Research Systems Interface</span>
@@ -560,7 +570,7 @@
         <div class="hero-copy">
           <div>
             <div class="eyebrow">Desktop control surface for agent work</div>
-            <h1>Run and review multi-agent work in one place.</h1>
+            <h1>Run and review multi-agent very long running tasks in one place.</h1>
             <p class="subtitle">
               Start a run, watch it unfold, inspect the graph, and review the files it produces without jumping between tools.
             </p>
@@ -588,10 +598,41 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <img class="visual-main" src="images/hud.png" alt="RESI topology HUD" />
+          <picture>
+            <source srcset="images/optimized/hud.webp" type="image/webp" />
+            <img
+              class="visual-main"
+              src="images/hud.png"
+              alt="RESI topology HUD"
+              width="1600"
+              height="1045"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
           <div class="visual-strip">
-            <img class="visual-thumb" src="images/prompt.png" alt="RESI prompt interface" />
-            <img class="visual-thumb" src="images/output.png" alt="RESI output view" />
+            <picture>
+              <source srcset="images/optimized/prompt.webp" type="image/webp" />
+              <img
+                class="visual-thumb"
+                src="images/prompt.png"
+                alt="RESI prompt interface"
+                width="1600"
+                height="1031"
+                decoding="async"
+              />
+            </picture>
+            <picture>
+              <source srcset="images/optimized/output.webp" type="image/webp" />
+              <img
+                class="visual-thumb"
+                src="images/output.png"
+                alt="RESI output view"
+                width="1600"
+                height="1035"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -639,7 +680,19 @@
 
         <div class="shots">
           <div class="shot-row">
-            <div class="shot-frame"><img src="images/prompt.png" alt="RESI compose view" /></div>
+            <div class="shot-frame">
+              <picture>
+                <source srcset="images/optimized/prompt.webp" type="image/webp" />
+                <img
+                  src="images/prompt.png"
+                  alt="RESI compose view"
+                  width="1600"
+                  height="1031"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
             <div class="shot-copy">
               <p class="shot-kicker">Compose</p>
               <h3>Start the run.</h3>
@@ -661,11 +714,35 @@
                 <div><strong>Readable status</strong><span>You do not need to infer what the system is doing.</span></div>
               </div>
             </div>
-            <div class="shot-frame"><img src="images/output.png" alt="RESI output dashboard" /></div>
+            <div class="shot-frame">
+              <picture>
+                <source srcset="images/optimized/output.webp" type="image/webp" />
+                <img
+                  src="images/output.png"
+                  alt="RESI output dashboard"
+                  width="1600"
+                  height="1035"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           </div>
 
           <div class="shot-row">
-            <div class="shot-frame"><img src="images/hud.png" alt="RESI topology view" /></div>
+            <div class="shot-frame">
+              <picture>
+                <source srcset="images/optimized/hud.webp" type="image/webp" />
+                <img
+                  src="images/hud.png"
+                  alt="RESI topology view"
+                  width="1600"
+                  height="1045"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
             <div class="shot-copy">
               <p class="shot-kicker">Topology HUD</p>
               <h3>See the system as a graph.</h3>
@@ -687,7 +764,19 @@
                 <div><strong>Easy handoff</strong><span>Download the run when it is ready to leave the app.</span></div>
               </div>
             </div>
-            <div class="shot-frame"><img src="images/files.png" alt="RESI file browser" /></div>
+            <div class="shot-frame">
+              <picture>
+                <source srcset="images/optimized/files.webp" type="image/webp" />
+                <img
+                  src="images/files.png"
+                  alt="RESI file browser"
+                  width="1600"
+                  height="1039"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </section>
